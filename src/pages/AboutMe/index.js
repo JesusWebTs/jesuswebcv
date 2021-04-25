@@ -59,7 +59,7 @@ function AboutMePage({ id, content }) {
         <p>{interests.p_1}</p>
         <p>{interests.p_2}</p>
       </article>
-      <button onClick={changeColor}>Imprimir</button>
+      <button onClick={changeColor}>Change Color test</button>
     </SectionContainer>
   );
 }
