@@ -37,6 +37,29 @@ const TextImage = styled.span`
   color: ${lightColors.color_white};
   font-size: ${ImageTitle};
   z-index: 10;
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    height: 70%;
+    bottom: 10px;
+    width: 5px;
+    animation-name: cursorAnimation;
+    animation-duration: 0.6s;
+    animation-iteration-count: infinite;
+    
+    right: 0;
+    transform: translateX(100%);
+    background-color: white;
+  }
+  @keyframes cursorAnimation {
+    0% {
+      transform: translateX(100%) rotateX(180deg);
+    }
+    100% {
+      transform: translateX(100%) rotateX(0deg);
+    }
+  }
 `;
 
 const SocialContainer = styled.div`

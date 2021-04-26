@@ -8,16 +8,21 @@ import headerImage from "../../assets/images/header-image.webp";
 
 //Components
 import { NavBar, SocialMedia } from "../../components";
+import { useTextAnimation } from "./hooks/useTextAnimation";
 
 function HeaderComponent() {
+  const { word } = useTextAnimation({ targetWord: "<Jesús Web />" });
   const color = useSelector((state) => state.colors);
   return (
     <>
       <Header color={color}>
-        <HeroImage style={{ backgroundImage: `url(${headerImage})` }} color={color}>
-          <TextImage color={color}>{"<Jesús Web />"}</TextImage>
+        <HeroImage
+          style={{ backgroundImage: `url(${headerImage})` }}
+          color={color}
+        >
+          <TextImage color={color}>{word}</TextImage>
           <SocialContainer color={color}>
-            <SocialMedia color={color}/>
+            <SocialMedia color={color} />
           </SocialContainer>
         </HeroImage>
       </Header>
