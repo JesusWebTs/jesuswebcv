@@ -1,3 +1,12 @@
+import  JavaScriptImg from "assets/icons/javascript-icon.svg" 
+import  NodeJsImg from "assets/icons/nodejs-icon.svg" 
+import  ReactJsImg from "assets/icons/reactjs-icon.svg" 
+import  HTMLImg from "assets/icons/w3_html5-icon.svg" 
+import  CSS3Img from "assets/icons/css3-icon.svg" 
+import  GraphQLImg from "assets/icons/graphql-icon.svg" 
+import  JestImg from "assets/icons/jestjsio-icon.svg" 
+import  jQueryImg from "assets/icons/jquery-icon.svg" 
+
 const aboutMook = () => {
   return {
     title: "Acerca de Mi",
@@ -28,40 +37,54 @@ const aboutMook = () => {
   };
 };
 
+
+
+
 const skillsMook = () => {
-  return [
-    {
-      skill: "js",
-      percentage: 60,
-    },
-    {
-      skill: "nodejs",
-      percentage: 50,
-    },
-    {
-      skill: "reactjs",
-      percentage: 65,
-    },
-    {
-      skill: "html",
-      percentage: 70,
-    },
-    {
-      skill: "css",
-      percentage: 65,
-    },
-    {
-      skill: "graphql",
-      percentage: 45,
-    },
-    {
-      skill: "jest",
-      percentage: 40,
-    },
-    {
-      skill: "jquery",
-      percentage: 35,
-    },
-  ];
+  return  {
+    title: "Mis Habilidades",
+    skills: [
+      {
+        skillName: "JavaScript",
+        skillIconName: JavaScriptImg,
+        percentage: 60,
+      },
+      {
+        skillName: "NodeJs",
+        skillIconName: NodeJsImg,
+        percentage: 50,
+      },
+      {
+        skillName: "ReactJs",
+        skillIconName: ReactJsImg,
+        percentage: 65,
+      },
+      {
+        skillName: "HTML",
+        skillIconName: HTMLImg,
+        percentage: 70,
+      },
+      {
+        skillName: "CSS3",
+        skillIconName: CSS3Img,
+        percentage: 65,
+      },
+      {
+        skillName: "GraphQL",
+        skillIconName: GraphQLImg,
+        percentage: 45,
+      },
+      {
+        skillName: "Jest",
+        skillIconName: JestImg,
+        percentage: 40,
+      },
+      {
+        skillName: "jQuery",
+        skillIconName: jQueryImg,
+        percentage: 35,
+      },
+    ]
+  }
 };
 export default { aboutMook, skillsMook };

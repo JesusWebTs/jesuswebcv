@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 //Styles
 import { Header, HeroImage, TextImage, SocialContainer } from "./styles";
 //Assets
-import headerImage from "assets/images/header-image.jpg";
+import headerImage from "assets/images/header-image.webp";
 
 //Components
 import { NavBar, SocialMedia } from "components";

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { mediaQuerys } from "../styles";
 
 const SectionContainer = styled.section`
-  min-height: 100vh;
+  /* min-height: 100vh; */
   max-width: 90%;
   background-color: transparent;
   left: 0;
@@ -10,7 +10,7 @@ const SectionContainer = styled.section`
   margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
 
   ${mediaQuerys.desktopsAndLaptops} {
     justify-content: stretch;

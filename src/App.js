@@ -15,7 +15,7 @@ function App() {
         {pages.map((page) => (
           <React.Fragment key={page.href}>{page.section}</React.Fragment>
         ))}
-        {/* <Footer /> */}
+        {/* <Footer /> */}        
       </Provider>
     </div>
   );

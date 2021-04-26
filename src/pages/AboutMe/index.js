@@ -8,24 +8,6 @@ import { darkMode, lightMode } from "../../redux";
 
 function AboutMePage({ id, content }) {
   const { history, whatIDo, attitudes, interests } = content;
-  const [color, setColor] = useState(false);
-  const colorDef = useSelector((state) => state.colors);
-  const dispath = useDispatch();
-
-  useEffect(() => {
-    console.log(colorDef);
-    return () => {};
-  }, [color]);
-
-  const changeColor = () => {
-    if (color) {
-      setColor(false);
-      dispath(lightMode());
-    } else {
-      setColor(true);
-      dispath(darkMode());
-    }
-  };
 
   return (
     <SectionContainer id={id}>
@@ -59,7 +41,6 @@ function AboutMePage({ id, content }) {
         <p>{interests.p_1}</p>
         <p>{interests.p_2}</p>
       </article>
-      <button onClick={changeColor}>Change Color test</button>
     </SectionContainer>
   );
 }
