@@ -2,19 +2,21 @@ import React from "react";
 //Components
 import { SectionTitle, SkillCard } from "components";
 //Styles
-import { SectionContainer } from "pages/styles";
+import { SectionContainer, FlexContainer } from "pages/styles";
 
 function SkillsPage({ id, content }) {
   console.log(content);
   return (
-    <SectionContainer>
+    <SectionContainer id={id}>
       <SectionTitle>{content.title}</SectionTitle>
-      {content.skills.map((skill) => (
-        <SkillCard        
-          skillName={skill.skillName}
-          skillIcon={skill.skillIconName}
-        />
-      ))}
+      <FlexContainer>
+        {content.skills.map((skill) => (
+          <SkillCard
+            skillName={skill.skillName}
+            skillIcon={skill.skillIconName}
+          />
+        ))}
+      </FlexContainer>
     </SectionContainer>
   );
 }

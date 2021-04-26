@@ -11,6 +11,7 @@ const NavContainer = styled.nav`
   padding: 5px;
   z-index: 10;
   ${mediaQuerys.desktopsAndLaptops} {
+    padding: 0px;
     position: sticky;
     top: 0;
     height: fit-content;

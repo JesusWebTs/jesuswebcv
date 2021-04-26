@@ -45,6 +45,16 @@ const skillsMook = () => {
     title: "Mis Habilidades",
     skills: [
       {
+        skillName: "HTML",
+        skillIconName: HTMLImg,
+        percentage: 70,
+      },
+      {
+        skillName: "CSS3",
+        skillIconName: CSS3Img,
+        percentage: 65,
+      },
+      {
         skillName: "JavaScript",
         skillIconName: JavaScriptImg,
         percentage: 60,
@@ -59,16 +69,7 @@ const skillsMook = () => {
         skillIconName: ReactJsImg,
         percentage: 65,
       },
-      {
-        skillName: "HTML",
-        skillIconName: HTMLImg,
-        percentage: 70,
-      },
-      {
-        skillName: "CSS3",
-        skillIconName: CSS3Img,
-        percentage: 65,
-      },
+      
       {
         skillName: "GraphQL",
         skillIconName: GraphQLImg,

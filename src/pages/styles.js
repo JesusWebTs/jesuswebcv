@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mediaQuerys } from "../styles";
 
-const SectionContainer = styled.section`
+export const SectionContainer = styled.section`
   /* min-height: 100vh; */
   max-width: 90%;
   background-color: transparent;
@@ -17,4 +17,9 @@ const SectionContainer = styled.section`
   }
 `;
 
-export { SectionContainer };
+export const FlexContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+`;
