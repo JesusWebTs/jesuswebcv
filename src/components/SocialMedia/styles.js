@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, colors } from "styles";
+import { fontSizes, colors } from "../../styles";
 
 const { lightColors } = colors;
 

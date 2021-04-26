@@ -1,8 +1,8 @@
 import React from "react";
 //Components
-import { SectionTitle, SkillCard } from "components";
+import { SectionTitle, SkillCard } from "../../components";
 //Styles
-import { SectionContainer, GridContainer } from "pages/styles";
+import { SectionContainer, GridContainer } from "../styles";
 
 function SkillsPage({ id, content }) {
   return (

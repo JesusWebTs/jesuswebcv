@@ -1,13 +1,13 @@
 import React from "react";
-import pages from "navigation/navPages";
+import pages from "../../navigation/navPages";
 import { useSelector } from "react-redux";
 //Styles
 import { Header, HeroImage, TextImage, SocialContainer } from "./styles";
 //Assets
-import headerImage from "assets/images/header-image.webp";
+import headerImage from "../../assets/images/header-image.webp";
 
 //Components
-import { NavBar, SocialMedia } from "components";
+import { NavBar, SocialMedia } from "../../components";
 
 function HeaderComponent() {
   const color = useSelector((state) => state.colors);

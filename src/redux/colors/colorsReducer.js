@@ -1,5 +1,5 @@
 import { LIGHT_MODE, DARK_MODE } from "./colorsTypes";
-import { colors } from "styles";
+import { colors } from "../../styles";
 
 const initialState = colors.lightColors;
 

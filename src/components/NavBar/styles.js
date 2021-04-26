@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaQuerys, colors } from "styles";
+import { mediaQuerys, colors } from "../../styles";
 
 const NavContainer = styled.nav`
   display: flex;

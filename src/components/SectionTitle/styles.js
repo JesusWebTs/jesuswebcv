@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors, fontSizes } from "styles";
+import { colors, fontSizes } from "../../styles";
 
 const TitleStyled = styled.h2`
   color: ${colors.lightColors.color_black};

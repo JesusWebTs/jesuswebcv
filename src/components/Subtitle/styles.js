@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes } from "styles";
+import { fontSizes } from "../../styles";
 
 const SubTitleStyled = styled.h3`
   font-size: ${fontSizes.subtitle};

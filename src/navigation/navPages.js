@@ -1,6 +1,6 @@
 import React from "react";
-import { AboutMePage, SkillsPage } from "pages";
-import content from "mooks/content";
+import { AboutMePage, SkillsPage } from "../pages";
+import content from "../mooks/content";
 export default [
   {
     title: "Acerca de Mi",

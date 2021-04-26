@@ -1,11 +1,11 @@
-import JavaScriptImg from "assets/icons/javascript-icon.svg";
-import NodeJsImg from "assets/icons/nodejs-icon.svg";
-import ReactJsImg from "assets/icons/reactjs-icon.svg";
-import HTMLImg from "assets/icons/w3_html5-icon.svg";
-import CSS3Img from "assets/icons/css3-icon.svg";
-import GraphQLImg from "assets/icons/graphql-icon.svg";
-import JestImg from "assets/icons/jestjsio-icon.svg";
-import jQueryImg from "assets/icons/jquery-icon.svg";
+import JavaScriptImg from "../assets/icons/javascript-icon.svg";
+import NodeJsImg from "../assets/icons/nodejs-icon.svg";
+import ReactJsImg from "../assets/icons/reactjs-icon.svg";
+import HTMLImg from "../assets/icons/w3_html5-icon.svg";
+import CSS3Img from "../assets/icons/css3-icon.svg";
+import GraphQLImg from "../assets/icons/graphql-icon.svg";
+import JestImg from "../assets/icons/jestjsio-icon.svg";
+import jQueryImg from "../assets/icons/jquery-icon.svg";
 
 const aboutMook = () => {
   return {
