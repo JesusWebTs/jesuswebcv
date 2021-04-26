@@ -1,11 +1,11 @@
-import  JavaScriptImg from "assets/icons/javascript-icon.svg" 
-import  NodeJsImg from "assets/icons/nodejs-icon.svg" 
-import  ReactJsImg from "assets/icons/reactjs-icon.svg" 
-import  HTMLImg from "assets/icons/w3_html5-icon.svg" 
-import  CSS3Img from "assets/icons/css3-icon.svg" 
-import  GraphQLImg from "assets/icons/graphql-icon.svg" 
-import  JestImg from "assets/icons/jestjsio-icon.svg" 
-import  jQueryImg from "assets/icons/jquery-icon.svg" 
+import JavaScriptImg from "assets/icons/javascript-icon.svg";
+import NodeJsImg from "assets/icons/nodejs-icon.svg";
+import ReactJsImg from "assets/icons/reactjs-icon.svg";
+import HTMLImg from "assets/icons/w3_html5-icon.svg";
+import CSS3Img from "assets/icons/css3-icon.svg";
+import GraphQLImg from "assets/icons/graphql-icon.svg";
+import JestImg from "assets/icons/jestjsio-icon.svg";
+import jQueryImg from "assets/icons/jquery-icon.svg";
 
 const aboutMook = () => {
   return {
@@ -37,55 +37,70 @@ const aboutMook = () => {
   };
 };
 
-
-
-
 const skillsMook = () => {
-  return  {
+  return {
     title: "Mis Habilidades",
     skills: [
       {
         skillName: "HTML",
         skillIconName: HTMLImg,
         percentage: 70,
+        color: "#FF5733",
+        text: "¡Maquetemos paginas utilizando el ultimo estandart de HTML5!",
       },
       {
         skillName: "CSS3",
         skillIconName: CSS3Img,
         percentage: 65,
+        color: "#2062AF",
+        text:
+          "¡Demosle vida a nuestros proyecto utilizando las ultimas caracteristicas de CSS3",
       },
       {
         skillName: "JavaScript",
         skillIconName: JavaScriptImg,
         percentage: 60,
+        color: "#F7DF1E",
+        text:
+          "¿Interactividad? Eso es muy importante, ¡Agreguemos muchos botones!",
       },
       {
         skillName: "NodeJs",
         skillIconName: NodeJsImg,
         percentage: 50,
+        color: "#8CC84B",
+        text:
+          "Hagamos un backend utilizando las mejores practicas de js con NodeJs.",
       },
       {
         skillName: "ReactJs",
         skillIconName: ReactJsImg,
         percentage: 65,
+        color: "#00D8FF",
+        text: "¡Usemos puro musculo para desarrollar grandes proyectos muy rapido!",
       },
-      
       {
         skillName: "GraphQL",
         skillIconName: GraphQLImg,
         percentage: 45,
+        color: "#E10098",
+        text: "¡No nos agobiemos con complicadas consultas a base de datos, todo lo necesario esta aqui!",
       },
       {
         skillName: "Jest",
         skillIconName: JestImg,
         percentage: 40,
+        color: "#99424F",
+        text: "¡Desarrollemos proyectos a prueba de fallos, es mejor ser precavido!",
       },
       {
         skillName: "jQuery",
         skillIconName: jQueryImg,
         percentage: 35,
+        color: "#0868AC",
+        text: "¿Tienes un proyecto viejo?, ¿Necesitas soporte? ¡No hay problema!",
       },
-    ]
-  }
+    ],
+  };
 };
 export default { aboutMook, skillsMook };

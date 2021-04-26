@@ -5,6 +5,7 @@ const SubTitleStyled = styled.h3`
   font-size: ${fontSizes.subtitle};
   position: relative;
   width: max-content;
+  text-align: center;
   &:before {
     position: absolute;
     content: "";

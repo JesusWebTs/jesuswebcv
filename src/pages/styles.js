@@ -17,9 +17,17 @@ export const SectionContainer = styled.section`
   }
 `;
 
-export const FlexContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px 50px;
+  
+  justify-items: center;
+  align-items: center;
+  ${mediaQuerys.iPadsLandscape} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  ${mediaQuerys.desktopsAndLaptops} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;

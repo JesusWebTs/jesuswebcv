@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React from "react";
+
 
 import { SubTitle, SectionTitle } from "../../components";
 import { SectionContainer } from "../styles";
 
-import { darkMode, lightMode } from "../../redux";
+
 
 function AboutMePage({ id, content }) {
   const { history, whatIDo, attitudes, interests } = content;
