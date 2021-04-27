@@ -4,5 +4,14 @@ import SocialMedia from "./SocialMedia";
 import SectionTitle from "./SectionTitle";
 import SubTitle from "./Subtitle";
 import SkillCard from "./SkillCard";
+import ContactForm from "./ContactForm";
 
-export { Header, NavBar, SectionTitle, SocialMedia, SubTitle, SkillCard };
+export {
+  Header,
+  NavBar,
+  SectionTitle,
+  SocialMedia,
+  SubTitle,
+  SkillCard,
+  ContactForm,
+};

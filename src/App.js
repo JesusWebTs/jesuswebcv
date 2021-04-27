@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Header />
+        <Header id=""/>
         {pages.map((page) => (
           <React.Fragment key={page.href}>{page.section}</React.Fragment>
         ))}

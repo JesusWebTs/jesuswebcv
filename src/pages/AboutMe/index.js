@@ -34,13 +34,13 @@ function AboutMePage({ id, content }) {
         <p>{attitudes.p_1}</p>
         <p>{attitudes.p_2}</p>
       </article>
-      <article>
+      {/* <article>
         <header>
           <SubTitle>{interests.h3_1}</SubTitle>
         </header>
         <p>{interests.p_1}</p>
         <p>{interests.p_2}</p>
-      </article>
+      </article> */}
     </SectionContainer>
   );
 }

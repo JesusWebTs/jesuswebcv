@@ -77,30 +77,40 @@ const skillsMook = () => {
         skillIconName: ReactJsImg,
         percentage: 65,
         color: "#00D8FF",
-        text: "¡Usemos puro musculo para desarrollar grandes proyectos muy rapido!",
+        text:
+          "¡Usemos puro musculo para desarrollar grandes proyectos muy rapido!",
       },
       {
         skillName: "GraphQL",
         skillIconName: GraphQLImg,
         percentage: 45,
         color: "#E10098",
-        text: "¡No nos agobiemos con complicadas consultas a base de datos, todo lo necesario esta aqui!",
+        text:
+          "¡No nos agobiemos con complicadas consultas a base de datos, todo lo necesario esta aqui!",
       },
       {
         skillName: "Jest",
         skillIconName: JestImg,
         percentage: 40,
         color: "#99424F",
-        text: "¡Desarrollemos proyectos a prueba de fallos, es mejor ser precavido!",
+        text:
+          "¡Desarrollemos proyectos a prueba de fallos, es mejor ser precavido!",
       },
       {
         skillName: "jQuery",
         skillIconName: jQueryImg,
         percentage: 35,
         color: "#0868AC",
-        text: "¿Tienes un proyecto viejo?, ¿Necesitas soporte? ¡No hay problema!",
+        text:
+          "¿Tienes un proyecto viejo?, ¿Necesitas soporte? ¡No hay problema!",
       },
     ],
   };
 };
-export default { aboutMook, skillsMook };
+
+const contactMook = () => {
+  return {
+    title: "Contacto",
+  };
+};
+export default { aboutMook, skillsMook, contactMook };

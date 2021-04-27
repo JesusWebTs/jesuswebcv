@@ -5,7 +5,7 @@ const TitleStyled = styled.h2`
   color: ${colors.lightColors.color_black};
   font-size: ${fontSizes.title};
   font-weight: 600;
-  margin-top: 10px;
+  margin: 50px 0;
   position: relative;
   &:before {
     content: "";

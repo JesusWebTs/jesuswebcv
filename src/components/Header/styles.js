@@ -1,5 +1,9 @@
 import styled from "styled-components";
+//Styles
 import { colors, fontSizes } from "../../styles";
+
+//Hooks
+import useColor from "../../hooks/useColor";
 
 const { ImageTitle } = fontSizes;
 const { lightColors } = colors;
@@ -28,13 +32,13 @@ const HeroImage = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: ${colors.lightColors.color_black}44;
+    background-color: ${() => useColor().color_1}44;
     z-index: 0;
   }
 `;
 const TextImage = styled.span`
   display: block;
-  color: ${lightColors.color_white};
+  color: ${() => useColor().color_white};
   font-size: ${ImageTitle};
   z-index: 10;
   position: relative;
@@ -47,10 +51,10 @@ const TextImage = styled.span`
     animation-name: cursorAnimation;
     animation-duration: 0.6s;
     animation-iteration-count: infinite;
-    
+
     right: 0;
     transform: translateX(100%);
-    background-color: white;
+    background-color: ${() => useColor().color_white};
   }
   @keyframes cursorAnimation {
     0% {
