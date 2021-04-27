@@ -5,6 +5,7 @@ import SectionTitle from "./SectionTitle";
 import SubTitle from "./Subtitle";
 import SkillCard from "./SkillCard";
 import ContactForm from "./ContactForm";
+import ContactCards from "./ContactCards";
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   SubTitle,
   SkillCard,
   ContactForm,
+  ContactCards,
 };
