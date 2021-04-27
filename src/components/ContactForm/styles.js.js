@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import useColor from "../../hooks/useColor";
+import { mediaQuerys } from "../../styles";
 
 export const InputStyled = styled.input`
   width: 100%;
@@ -26,7 +27,13 @@ export const FormStyled = styled.form`
 
 export const CardsContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  gap: 25px;
+  flex-direction: column;
+  align-items: center;
+  ${mediaQuerys.desktopsAndLaptops} {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 `;
 export const CardIcon = styled.i`
   display: flex;
@@ -54,4 +61,6 @@ export const CardText = styled.h3``;
 
 export const InputContainerStyled = styled.div``;
 
-export const FormButton = styled.input``;
+export const FormButton = styled.input`
+  align-self: flex-end;
+`;
