@@ -33,7 +33,6 @@ export const CloseButtonStyled = styled.button`
   overflow: hidden;
   width: 50px;
   height: 50px;
-  }
   & svg {
     width: 50px;
     height: 50px;
