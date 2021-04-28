@@ -1,5 +1,6 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import useFormState from "./hook/useFormState";
+import { useSendmail } from "./hook/useSendMail";
 //Components
 
 //Styles
@@ -8,39 +9,84 @@ import {
   InputStyled,
   InputContainerStyled,
   FormButton,
+  TextAreaStyled,
+  InputLabelStyled,
+  TextAreaContainerStyled,
 } from "./styles.js";
 
 function ContactForm() {
+  const { changeField, formState } = useFormState();
+  const { sendMail } = useSendmail();
   return (
-    <>
-      <FormStyled>
-        <label>
+    <FormStyled>
+      <InputContainerStyled>
+        <InputStyled
+          value={formState.name}
+          onChange={(e) =>
+            changeField({ type: "CHANGE_NAME", payload: e.target.value })
+          }
+          type="text"
+          id="name"
+        />
+        <InputLabelStyled filled={formState.name ? true : false} htmlFor="name">
           Nombre:
-          <InputContainerStyled>
-            <InputStyled type="text" value="Nombre" />
-          </InputContainerStyled>
-        </label>
-        <label>
+        </InputLabelStyled>
+      </InputContainerStyled>
+      <InputContainerStyled>
+        <InputStyled
+          value={formState.email}
+          onChange={(e) =>
+            changeField({ type: "CHANGE_EMAIL", payload: e.target.value })
+          }
+          type="text"
+          id="email"
+        />
+        <InputLabelStyled
+          filled={formState.email ? true : false}
+          htmlFor="email"
+        >
           Email:
-          <InputContainerStyled>
-            <InputStyled type="text" value="Email" />
-          </InputContainerStyled>
-        </label>
-        <label>
+        </InputLabelStyled>
+      </InputContainerStyled>
+      <InputContainerStyled>
+        <InputStyled
+          value={formState.company}
+          onChange={(e) =>
+            changeField({ type: "CHANGE_COMPANY", payload: e.target.value })
+          }
+          type="text"
+          id="company"
+        />
+        <InputLabelStyled
+          filled={formState.company ? true : false}
+          htmlFor="company"
+        >
           Compañia:
-          <InputContainerStyled>
-            <InputStyled type="text" value="Compañia" />
-          </InputContainerStyled>
-        </label>
-        <label>
+        </InputLabelStyled>
+      </InputContainerStyled>
+      <TextAreaContainerStyled>
+        <TextAreaStyled
+          value={formState.comment}
+          onChange={(e) =>
+            changeField({ type: "CHANGE_COMMENT", payload: e.target.value })
+          }
+          id="comment"
+        />
+        <InputLabelStyled
+          filled={formState.comment ? true : false}
+          htmlFor="comment"
+        >
           Comentario:
-          <InputContainerStyled>
-            <InputStyled type="text" value="Comentario" />
-          </InputContainerStyled>
-        </label>
-        <FormButton type="submit" onClick={(e) => e.preventDefault()} />
-      </FormStyled>
-    </>
+        </InputLabelStyled>
+      </TextAreaContainerStyled>
+      <FormButton
+        type="submit"
+        onClick={(e) => {
+          e.preventDefault();
+          return sendMail(formState);
+        }}
+      />
+    </FormStyled>
   );
 }
 
