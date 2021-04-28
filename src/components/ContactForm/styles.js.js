@@ -44,6 +44,7 @@ export const InputLabelStyled = styled.label`
   transition-duration: 0.2s;
   transition-timing-function: ease;
   margin-left: 10px;
+  pointer-events: none;
 `;
 
 export const FormStyled = styled.form`
@@ -59,6 +60,7 @@ export const FormStyled = styled.form`
   margin-right: auto;
   display: flex;
   flex-direction: column;
+  background-color: ${() => useColor().color_white};
 `;
 
 export const FormButton = styled.input`

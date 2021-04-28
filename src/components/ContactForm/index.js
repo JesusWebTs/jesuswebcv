@@ -21,6 +21,7 @@ function ContactForm() {
     <FormStyled>
       <InputContainerStyled>
         <InputStyled
+          autoComplete="off"
           value={formState.name}
           onChange={(e) =>
             changeField({ type: "CHANGE_NAME", payload: e.target.value })
@@ -34,6 +35,7 @@ function ContactForm() {
       </InputContainerStyled>
       <InputContainerStyled>
         <InputStyled
+          autoComplete="off"
           value={formState.email}
           onChange={(e) =>
             changeField({ type: "CHANGE_EMAIL", payload: e.target.value })
@@ -50,6 +52,7 @@ function ContactForm() {
       </InputContainerStyled>
       <InputContainerStyled>
         <InputStyled
+          autoComplete="off"
           value={formState.company}
           onChange={(e) =>
             changeField({ type: "CHANGE_COMPANY", payload: e.target.value })

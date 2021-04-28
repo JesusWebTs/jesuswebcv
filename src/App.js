@@ -6,12 +6,13 @@ import Header from "./components/Header";
 import pages from "./navigation/navPages";
 
 import store from "./redux/store";
+import { ContactForm, Modal } from "./components";
 
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <Header id=""/>
+        <Header id="" />
         {pages.map((page) => (
           <React.Fragment key={page.href}>{page.section}</React.Fragment>
         ))}

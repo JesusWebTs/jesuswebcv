@@ -15,7 +15,7 @@ body {
 
 @media only screen and (min-width: 1224px) {
   * {
-    scroll-margin: 60px;
+    scroll-margin: 10px;
   }
 }
 

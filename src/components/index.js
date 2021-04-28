@@ -6,6 +6,8 @@ import SubTitle from "./Subtitle";
 import SkillCard from "./SkillCard";
 import ContactForm from "./ContactForm";
 import ContactCards from "./ContactCards";
+import Modal from "./Modal";
+import Button from "./Button";
 
 export {
   Header,
@@ -16,4 +18,6 @@ export {
   SkillCard,
   ContactForm,
   ContactCards,
+  Modal,
+  Button
 };
