@@ -13,6 +13,7 @@ export const InputStyled = styled.input`
   }
 `;
 export const InputContainerStyled = styled.div`
+  width: 100%;
   border-bottom: 2px solid ${() => useColor().color_4};
   padding: 2px 0;
   display: flex;
@@ -73,4 +74,28 @@ export const FormButton = styled.input`
   background-color: ${() => useColor().color_4};
   font-size: 20px;
   cursor: pointer;
+`;
+
+export const InfoContainerStyled = styled.div`
+  display: flex;
+  flex-direction: ${({ direction }) => direction};
+  width: 100%;
+  column-gap: 20px;
+`;
+
+export const ThankModalStyled = styled.div`
+  background-color: ${() => useColor().color_white};
+  margin: 40px;
+  height: 200px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+`;
+
+export const IconStyled = styled.i`
+  & svg {
+    width: 50px;
+    height: 50px;
+    color: ${() => useColor().color_4};
+  }
 `;

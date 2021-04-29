@@ -7,7 +7,7 @@ function ContactPage({ id, content }) {
     <SectionContainer id={id}>
       <SectionTitle>{content.title}</SectionTitle>
       <ContactCards></ContactCards>
-      <ContactForm></ContactForm>
+      <ContactForm direction="row"></ContactForm>
     </SectionContainer>
   );
 }

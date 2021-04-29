@@ -1,12 +1,11 @@
 import styled from "styled-components";
 //Styles
-import { colors, fontSizes } from "../../styles";
+import { fontSizes } from "../../styles";
 
 //Hooks
 import useColor from "../../hooks/useColor";
 
 const { ImageTitle } = fontSizes;
-const { lightColors } = colors;
 
 const Header = styled.header`
   position: relative;
@@ -46,7 +45,7 @@ const TextImage = styled.span`
     content: "";
     position: absolute;
     height: 70%;
-    bottom: 10px;
+    bottom: 4px;
     width: 5px;
     animation-name: cursorAnimation;
     animation-duration: 0.6s;
