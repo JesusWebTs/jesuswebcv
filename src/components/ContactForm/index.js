@@ -30,6 +30,7 @@ function ContactForm({ direction = "column" }) {
   const { sendMail } = useSendmail();
   const { closeModal, openModal, showModal } = useModal();
   const [error, setError] = useState(true);
+  const [submit, setSubmit] = useState(false);
 
   const [errorName, validName] = useValidateField({
     field: "Nombre",
@@ -65,11 +66,19 @@ function ContactForm({ direction = "column" }) {
   });
 
   useEffect(() => {
+    validName();
+    validEmail();
+    validCompany();
+    validComment();
+  }, []);
+
+  useEffect(() => {
     if (errorName || errorEmail || errorCompany || errorComment) {
       setError(true);
     } else {
       setError(false);
     }
+    console.log({ errorName, errorEmail, errorCompany, errorComment });
     return () => {};
   }, [errorName, errorEmail, errorCompany, errorComment]);
 
@@ -82,9 +91,13 @@ function ContactForm({ direction = "column" }) {
               <InputStyled
                 autoComplete="off"
                 value={formState.name}
-                onChange={(e) =>
-                  changeField({ type: "CHANGE_NAME", payload: e.target.value })
-                }
+                onChange={(e) => {
+                  validName();
+                  return changeField({
+                    type: "CHANGE_NAME",
+                    payload: e.target.value,
+                  });
+                }}
                 type="text"
                 id="name"
               />
@@ -95,16 +108,20 @@ function ContactForm({ direction = "column" }) {
                 Nombre:
               </InputLabelStyled>
             </InputContainerStyled>
-            {errorName ? <FieldError>{errorName}</FieldError> : null}
+            {errorName && submit ? <FieldError>{errorName}</FieldError> : null}
           </div>
           <div>
             <InputContainerStyled>
               <InputStyled
                 autoComplete="off"
                 value={formState.email}
-                onChange={(e) =>
-                  changeField({ type: "CHANGE_EMAIL", payload: e.target.value })
-                }
+                onChange={(e) => {
+                  validEmail();
+                  return changeField({
+                    type: "CHANGE_EMAIL",
+                    payload: e.target.value,
+                  });
+                }}
                 type="text"
                 id="email"
               />
@@ -115,7 +132,9 @@ function ContactForm({ direction = "column" }) {
                 Email:
               </InputLabelStyled>
             </InputContainerStyled>
-            {errorEmail ? <FieldError>{errorEmail}</FieldError> : null}
+            {errorEmail && submit ? (
+              <FieldError>{errorEmail}</FieldError>
+            ) : null}
           </div>
         </InfoContainerStyled>
         <div>
@@ -123,9 +142,13 @@ function ContactForm({ direction = "column" }) {
             <InputStyled
               autoComplete="off"
               value={formState.company}
-              onChange={(e) =>
-                changeField({ type: "CHANGE_COMPANY", payload: e.target.value })
-              }
+              onChange={(e) => {
+                validCompany();
+                return changeField({
+                  type: "CHANGE_COMPANY",
+                  payload: e.target.value,
+                });
+              }}
               type="text"
               id="company"
             />
@@ -136,15 +159,21 @@ function ContactForm({ direction = "column" }) {
               Compañia:
             </InputLabelStyled>
           </InputContainerStyled>
-          {errorCompany ? <FieldError>{errorCompany}</FieldError> : null}
+          {errorCompany && submit ? (
+            <FieldError>{errorCompany}</FieldError>
+          ) : null}
         </div>
         <div>
           <TextAreaContainerStyled>
             <TextAreaStyled
               value={formState.comment}
-              onChange={(e) =>
-                changeField({ type: "CHANGE_COMMENT", payload: e.target.value })
-              }
+              onChange={(e) => {
+                validComment();
+                return changeField({
+                  type: "CHANGE_COMMENT",
+                  payload: e.target.value,
+                });
+              }}
               id="comment"
             />
             <InputLabelStyled
@@ -154,17 +183,16 @@ function ContactForm({ direction = "column" }) {
               Comentario:
             </InputLabelStyled>
           </TextAreaContainerStyled>
-          {errorComment ? <FieldError>{errorComment}</FieldError> : null}
+          {errorComment && submit ? (
+            <FieldError>{errorComment}</FieldError>
+          ) : null}
         </div>
         <FormButton
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            validComment();
-            validName();
-            validEmail();
-            validCompany();
-            if (error) {              
+            setSubmit(true);
+            if (error) {
               return false;
             } else {
               return sendMail(formState)
