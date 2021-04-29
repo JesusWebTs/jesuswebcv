@@ -81,6 +81,9 @@ export const InfoContainerStyled = styled.div`
   flex-direction: ${({ direction }) => direction};
   width: 100%;
   column-gap: 20px;
+  & > div {
+    width: 100%;
+  }
 `;
 
 export const ThankModalStyled = styled.div`
@@ -97,5 +100,29 @@ export const IconStyled = styled.i`
     width: 50px;
     height: 50px;
     color: ${() => useColor().color_4};
+  }
+`;
+
+export const FieldError = styled.div`
+  border: 2px solid red;
+  order: -1;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: salmon;
+  color: ${() => useColor().color_white};
+
+  animation-name: errorAnimated;
+  animation-timing-function: ease;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  @keyframes errorAnimated {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 `;

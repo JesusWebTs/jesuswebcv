@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EmojiEmotionsIcon from "@material-ui/icons/EmojiEmotions";
 
 //hooks
@@ -21,94 +21,163 @@ import {
   InfoContainerStyled,
   ThankModalStyled,
   IconStyled,
+  FieldError,
 } from "./styles.js";
+import { useValidateField } from "./hook/useValidateField";
 
 function ContactForm({ direction = "column" }) {
   const { changeField, formState } = useFormState();
   const { sendMail } = useSendmail();
-
   const { closeModal, openModal, showModal } = useModal();
+  const [error, setError] = useState(true);
+
+  const [errorName, validName] = useValidateField({
+    field: "Nombre",
+    regExp: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
+    minSize: 5,
+    maxSize: 30,
+    example: "Jose Perez",
+    text: formState.name,
+  });
+  const [errorEmail, validEmail] = useValidateField({
+    field: "Email",
+    regExp: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    minSize: 5,
+    maxSize: null,
+    example: "email@example.com",
+    text: formState.email,
+  });
+  const [errorCompany, validCompany] = useValidateField({
+    field: "Compañia",
+    regExp: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
+    minSize: 4,
+    maxSize: 30,
+    example: "Compañia Ejemplo",
+    text: formState.company,
+  });
+  const [errorComment, validComment] = useValidateField({
+    field: "Comentario",
+    regExp: "",
+    minSize: 10,
+    maxSize: 500,
+    example: "Esto es un comentario de ejemplo",
+    text: formState.comment,
+  });
+
+  useEffect(() => {
+    if (errorName || errorEmail || errorCompany || errorComment) {
+      setError(true);
+    } else {
+      setError(false);
+    }
+    return () => {};
+  }, [errorName, errorEmail, errorCompany, errorComment]);
+
   return (
     <>
       <FormStyled>
         <InfoContainerStyled direction={direction}>
+          <div>
+            <InputContainerStyled>
+              <InputStyled
+                autoComplete="off"
+                value={formState.name}
+                onChange={(e) =>
+                  changeField({ type: "CHANGE_NAME", payload: e.target.value })
+                }
+                type="text"
+                id="name"
+              />
+              <InputLabelStyled
+                filled={formState.name ? true : false}
+                htmlFor="name"
+              >
+                Nombre:
+              </InputLabelStyled>
+            </InputContainerStyled>
+            {errorName ? <FieldError>{errorName}</FieldError> : null}
+          </div>
+          <div>
+            <InputContainerStyled>
+              <InputStyled
+                autoComplete="off"
+                value={formState.email}
+                onChange={(e) =>
+                  changeField({ type: "CHANGE_EMAIL", payload: e.target.value })
+                }
+                type="text"
+                id="email"
+              />
+              <InputLabelStyled
+                filled={formState.email ? true : false}
+                htmlFor="email"
+              >
+                Email:
+              </InputLabelStyled>
+            </InputContainerStyled>
+            {errorEmail ? <FieldError>{errorEmail}</FieldError> : null}
+          </div>
+        </InfoContainerStyled>
+        <div>
           <InputContainerStyled>
             <InputStyled
               autoComplete="off"
-              value={formState.name}
+              value={formState.company}
               onChange={(e) =>
-                changeField({ type: "CHANGE_NAME", payload: e.target.value })
+                changeField({ type: "CHANGE_COMPANY", payload: e.target.value })
               }
               type="text"
-              id="name"
+              id="company"
             />
             <InputLabelStyled
-              filled={formState.name ? true : false}
-              htmlFor="name"
+              filled={formState.company ? true : false}
+              htmlFor="company"
             >
-              Nombre:
+              Compañia:
             </InputLabelStyled>
           </InputContainerStyled>
-          <InputContainerStyled>
-            <InputStyled
-              autoComplete="off"
-              value={formState.email}
+          {errorCompany ? <FieldError>{errorCompany}</FieldError> : null}
+        </div>
+        <div>
+          <TextAreaContainerStyled>
+            <TextAreaStyled
+              value={formState.comment}
               onChange={(e) =>
-                changeField({ type: "CHANGE_EMAIL", payload: e.target.value })
+                changeField({ type: "CHANGE_COMMENT", payload: e.target.value })
               }
-              type="email"
-              id="email"
+              id="comment"
             />
             <InputLabelStyled
-              filled={formState.email ? true : false}
-              htmlFor="email"
+              filled={formState.comment ? true : false}
+              htmlFor="comment"
             >
-              Email:
+              Comentario:
             </InputLabelStyled>
-          </InputContainerStyled>
-        </InfoContainerStyled>
-        <InputContainerStyled>
-          <InputStyled
-            autoComplete="off"
-            value={formState.company}
-            onChange={(e) =>
-              changeField({ type: "CHANGE_COMPANY", payload: e.target.value })
-            }
-            type="text"
-            id="company"
-          />
-          <InputLabelStyled
-            filled={formState.company ? true : false}
-            htmlFor="company"
-          >
-            Compañia:
-          </InputLabelStyled>
-        </InputContainerStyled>
-        <TextAreaContainerStyled>
-          <TextAreaStyled
-            value={formState.comment}
-            onChange={(e) =>
-              changeField({ type: "CHANGE_COMMENT", payload: e.target.value })
-            }
-            id="comment"
-          />
-          <InputLabelStyled
-            filled={formState.comment ? true : false}
-            htmlFor="comment"
-          >
-            Comentario:
-          </InputLabelStyled>
-        </TextAreaContainerStyled>
+          </TextAreaContainerStyled>
+          {errorComment ? <FieldError>{errorComment}</FieldError> : null}
+        </div>
         <FormButton
           type="submit"
           onClick={(e) => {
             e.preventDefault();
-            return sendMail(formState)
-              .then(() => {
-                openModal();
-                setTimeout(() => closeModal(), 5000);
-              })
-              .catch((err) => console.log(err));
+            validComment();
+            validName();
+            validEmail();
+            validCompany();
+            if (error) {              
+              return false;
+            } else {
+              return sendMail(formState)
+                .then(() => {
+                  openModal();
+                  setTimeout(() => closeModal(), 5000);
+                  changeField({ type: "CHANGE_EMAIL", payload: "" });
+                  changeField({ type: "CHANGE_NAME", payload: "" });
+                  changeField({ type: "CHANGE_COMPANY", payload: "" });
+                  changeField({ type: "CHANGE_COMMENT", payload: "" });
+                })
+                .catch((err) => console.log(err));
+            }
           }}
         />
       </FormStyled>
