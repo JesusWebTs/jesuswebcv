@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 export function useTextAnimation({ targetWord, time = 200 }) {
   const [word, setWord] = useState("");
-  const [index, setIndex] = useState(0);
-
-  let interval;
+  const [index, setIndex] = useState(0);  
 
   useEffect(() => {
-    interval = setTimeout(() => {
+    let interval = setTimeout(() => {
       setIndex((prevState) => prevState + 1);
       setWord((prevState) => `${prevState}${targetWord[index]}`);
     }, 200);
-    if (index > targetWord.length-1) clearInterval(interval);
+    if (index > targetWord.length - 1) clearInterval(interval);
 
     return () => {
       clearInterval(interval);

@@ -10,13 +10,13 @@ function SocialMedia() {
   return (
     <div>
       <SocialMediaContainer>
-        <SocialMediaIcon color="twitter">
+        <SocialMediaIcon color="twitter" href="https://twitter.com/Richard18362733" target="_blank">
           <TwitterIcon />
         </SocialMediaIcon>
-        <SocialMediaIcon color="github">
+        <SocialMediaIcon color="github" href="https://github.com/xzotacx" target="_blank">
           <GitHubIcon />
         </SocialMediaIcon>
-        <SocialMediaIcon color="linkedin">
+        <SocialMediaIcon color="linkedin" href="https://www.linkedin.com/in/jesusweb/" target="_blank">
           <LinkedinIcon />
         </SocialMediaIcon>
       </SocialMediaContainer>

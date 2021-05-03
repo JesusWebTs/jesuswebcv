@@ -7,7 +7,7 @@ import { SectionContainer } from "../styles";
 
 
 function AboutMePage({ id, content }) {
-  const { history, whatIDo, attitudes, interests } = content;
+  const { history, whatIDo, attitudes } = content;
 
   return (
     <SectionContainer id={id}>

@@ -11,7 +11,7 @@ function SkillCard({ skillName, skillIconName, color, text }) {
     <SkillContainerStyled color={color} text={text}>
       <SkillTextStyled>{skillName}</SkillTextStyled>
       <SkillIconStyled>
-        <img width="100%" src={skillIconName}></img>
+        <img width="100%" src={skillIconName} alt={text}></img>
       </SkillIconStyled>
       <SkillDescriptionStyled>{text}</SkillDescriptionStyled>
     </SkillContainerStyled>

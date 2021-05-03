@@ -6,7 +6,6 @@ import Header from "./components/Header";
 import pages from "./navigation/navPages";
 
 import store from "./redux/store";
-import { ContactForm, Modal } from "./components";
 
 function App() {
   return (

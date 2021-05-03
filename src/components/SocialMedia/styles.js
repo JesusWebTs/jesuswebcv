@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontSizes, colors } from "../../styles";
+import { colors } from "../../styles";
 
 const { lightColors } = colors;
 
@@ -14,7 +14,7 @@ export const SocialMediaContainer = styled.div`
   gap: 20px;
 `;
 
-export const SocialMediaIcon = styled.div`
+export const SocialMediaIcon = styled.a`
   width: 40px;
   height: 40px;
   background-color: ${(props) =>

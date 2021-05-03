@@ -78,7 +78,6 @@ function ContactForm({ direction = "column" }) {
     } else {
       setError(false);
     }
-    console.log({ errorName, errorEmail, errorCompany, errorComment });
     return () => {};
   }, [errorName, errorEmail, errorCompany, errorComment]);
 

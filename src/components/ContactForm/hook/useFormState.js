@@ -1,10 +1,10 @@
 import { useReducer } from "react";
 
 const initialState = {
-  email: "",
-  name: "",
-  company: "",
-  comment: "",
+  email: "jesus.152006@gmail.com",
+  name: "Richard Martinez",
+  company: "Microsoft",
+  comment: "Hola como estas richared querido amigo",
 };
 
 const reducer = (state, action) => {

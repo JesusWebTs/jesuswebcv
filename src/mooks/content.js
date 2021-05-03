@@ -7,13 +7,13 @@ import GraphQLImg from "../assets/icons/graphql-icon.svg";
 import JestImg from "../assets/icons/jestjsio-icon.svg";
 import jQueryImg from "../assets/icons/jquery-icon.svg";
 
-const aboutMook = () => {
+export const aboutMook = () => {
   return {
     title: "Acerca de Mi",
     history: {
-      p_1: `¡Hola! Mi nombre es Richard de Jesús, soy estudiante de ingeniería Mecatrónica cursando actual el ultimo semestre en mi carrera.`,
-      p_2: `En el ultimo año me he dedicado a mejorar en tecnologías por las que siento pasión y me gusta seguir actualizándome y aprendiendo nuevas herramientas para resolver problemas desde una nueva perspectiva.`,
-      p_3: `Desde inicios de la pandemia se ha dificultado enorme mente la posibilidad de conseguir la titulación universitaria no obstante debido a mi interés en la tecnología no deje de aprender.`,
+      p_1: `¡Hola! Mi nombre es Richard de Jesús, soy estudiante de ingeniería Mecatrónica cursando actualmente el ultimo semestre en mi carrera. `,
+      p_2: `En el ultimo año me he dedicado a mejorar en tecnologías por las que siento pasión y me gusta seguir actualizándome, aprendiendo nuevas herramientas para resolver problemas. `,
+      p_3: `Desde inicios de la pandemia se ha dificultado enorme mente la posibilidad de conseguir la titulación universitaria no obstante debido a mi interés en la tecnología no deje de aprender. `,
     },
     whatIDo: {
       h3_1: `¿Qué es lo que hago?`,
@@ -29,15 +29,15 @@ const aboutMook = () => {
       p_1: `Lo mejor de este mundo es cumplir con pequeños tópicos e ir avanzando para siempre tener un producto que entregar. Así es la metodología SCRUM me parece una gran forma de trabajar en equipo.`,
       p_2: `No tengo ningún tipo de inconveniente en ayudar a un compañero cuando lo necesite debido a que siempre se aprende de los errores.`,
     },
-    interests: {
+    /* interests: {
       h3_1: `¿Cuáles son mis intereses?`,
       p_1: `En el pasado año he desarrollado un fuerte interés por desarrollo de IA y deep learning por lo que en un futuro me gustaría aprender PY (python) y comenzar en este maravilloso mundo.`,
       p_2: `Otro objetivo que tengo muy claro es mejorar mi nivel de ingles conversacional y escrito. `,
-    },
+    }, */
   };
 };
 
-const skillsMook = () => {
+export const skillsMook = () => {
   return {
     title: "Mis Habilidades",
     skills: [
@@ -108,9 +108,9 @@ const skillsMook = () => {
   };
 };
 
-const contactMook = () => {
+export const contactMook = () => {
   return {
     title: "Contacto",
   };
 };
-export default { aboutMook, skillsMook, contactMook };
+

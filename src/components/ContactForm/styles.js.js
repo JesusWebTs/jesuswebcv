@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import useColor from "../../hooks/useColor";
-import { mediaQuerys } from "../../styles";
 
 export const InputStyled = styled.input`
   width: 100%;
