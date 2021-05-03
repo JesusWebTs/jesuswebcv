@@ -6,8 +6,7 @@ export const sendMail = async (data) => {
     body: JSON.stringify(data),
     headers: { "Content-Type": "application/json" },
   })
-    .then((res) => {
-      console.log(res);
+    .then((res) => {      
       return res;
     })
     .catch((err) => {

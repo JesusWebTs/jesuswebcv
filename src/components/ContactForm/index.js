@@ -70,7 +70,7 @@ function ContactForm({ direction = "column" }) {
     validEmail();
     validCompany();
     validComment();
-  }, []);
+  }, [submit]);
 
   useEffect(() => {
     if (errorName || errorEmail || errorCompany || errorComment) {
@@ -202,6 +202,7 @@ function ContactForm({ direction = "column" }) {
                   changeField({ type: "CHANGE_NAME", payload: "" });
                   changeField({ type: "CHANGE_COMPANY", payload: "" });
                   changeField({ type: "CHANGE_COMMENT", payload: "" });
+                  setSubmit(false);
                 })
                 .catch((err) => console.log(err));
             }
