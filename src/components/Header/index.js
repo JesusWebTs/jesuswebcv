@@ -13,8 +13,10 @@ import {
   Button,
   ContactForm,
   Modal,
+  AButton,
 } from "../../components";
 import { useTextAnimation } from "./hooks/useTextAnimation";
+import cv from "../../assets/cv/Jesus-Web-Curriculum.pdf";
 
 function HeaderComponent({ id }) {
   const { word } = useTextAnimation({ targetWord: "<Jesús Web />" });
@@ -28,7 +30,12 @@ function HeaderComponent({ id }) {
           <SocialContainer>
             <SocialMedia />
           </SocialContainer>
-          <Button onClick={openModal}>¡Contactame!</Button>
+          <div style={{ display: "flex", gap: "15px" }}>
+            <Button onClick={openModal}>¡Contactame!</Button>
+            <AButton href={cv} download>
+              Descarga Mi CV
+            </AButton>
+          </div>
         </HeroImage>
       </Header>
       <NavBar pages={pages}></NavBar>

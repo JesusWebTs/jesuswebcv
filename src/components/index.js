@@ -8,6 +8,7 @@ import ContactForm from "./ContactForm";
 import ContactCards from "./ContactCards";
 import Modal from "./Modal";
 import Button from "./Button";
+import AButton from "./AButton";
 
 export {
   Header,
@@ -19,5 +20,6 @@ export {
   ContactForm,
   ContactCards,
   Modal,
-  Button
+  Button,
+  AButton
 };
