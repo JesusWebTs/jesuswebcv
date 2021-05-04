@@ -11,29 +11,30 @@ export const aboutMook = () => {
   return {
     title: "Acerca de Mi",
     history: {
-      p_1: `¡Hola! Mi nombre es Richard de Jesús, soy estudiante de ingeniería Mecatrónica cursando actualmente el ultimo semestre en mi carrera. `,
-      p_2: `En el ultimo año me he dedicado a mejorar en tecnologías por las que siento pasión y me gusta seguir actualizándome, aprendiendo nuevas herramientas para resolver problemas. `,
-      p_3: `Desde inicios de la pandemia se ha dificultado enorme mente la posibilidad de conseguir la titulación universitaria no obstante debido a mi interés en la tecnología no deje de aprender. `,
+      p_1: `Me llamo Richard de Jesús Martínez Shildes. Soy bachiller en ciencias, estudiante de ingeniería Mecatrónica y desarrollador junior Frontend, con conocimiento de Backend y bases de datos.`,
+      p_2: `Desde marzo de 2020, a inicios de la pandemia en Latinoamérica, me he dedicado a realizar cursos on-line en tecnologías de desarrollo web para la maquetación e interactividad de interfaces. `,
     },
     whatIDo: {
       h3_1: `¿Qué es lo que hago?`,
       ol_1: [
-        `Desarrollado de aplicaciones móviles y/o sitios web responsivas.`,
-        `Desarrollo de interfaces de usuario basados en los conceptos básicos de UI.`,
-        `Desarrollo a aplicaciones en el lado del servidor con patrones y estructuras de diseño.`,
+        `Desarrollar  aplicaciones móviles y/o sitios web responsivos.`,
+        `Desarrollar interfaces de usuario basados en los conceptos básicos de UI.`,
+        `Desarrollar aplicaciones en el lado del servidor con patrones y estructuras de diseño.`,
         `Administración y normalización de bases de datos.`,
       ],
     },
     attitudes: {
-      h3_1: `¿Cómo es mi forma de trabajar?`,
-      p_1: `Lo mejor de este mundo es cumplir con pequeños tópicos e ir avanzando para siempre tener un producto que entregar. Así es la metodología SCRUM me parece una gran forma de trabajar en equipo.`,
-      p_2: `No tengo ningún tipo de inconveniente en ayudar a un compañero cuando lo necesite debido a que siempre se aprende de los errores.`,
+      h3_1: `Actitudes`,
+      ol_1: [
+        `Autodidacta, soy capaz de aprender y aplicar nuevos conocimientos sin necesidad de utilizar educación formal.`,
+        `Colaborador, puedo adaptarme fácilmente a cualquier equipo de trabajo ya que disfruto de colaborar para obtener buenos resultados.`,
+        `Responsable, trato siempre de entregar el mejor resultado posible en el tiempo establecido.`,
+      ],
     },
-    /* interests: {
+    interests: {
       h3_1: `¿Cuáles son mis intereses?`,
-      p_1: `En el pasado año he desarrollado un fuerte interés por desarrollo de IA y deep learning por lo que en un futuro me gustaría aprender PY (python) y comenzar en este maravilloso mundo.`,
-      p_2: `Otro objetivo que tengo muy claro es mejorar mi nivel de ingles conversacional y escrito. `,
-    }, */
+      p_1: `Actualmente estoy interesado en mejorar mi nivel de inglés para hablarlo de manera fluida. Además de obtener experiencia para convertirme en un desarrollador web senior. Y en un futuro cercano poder aprender a programar en Python y Typescript para el desarrollo de IA’s y deep learning.`,
+    },
   };
 };
 
@@ -113,4 +114,3 @@ export const contactMook = () => {
     title: "Contacto",
   };
 };
-

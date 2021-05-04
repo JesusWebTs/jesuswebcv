@@ -1,13 +1,10 @@
 import React from "react";
 
-
 import { SubTitle, SectionTitle } from "../../components";
 import { SectionContainer } from "../styles";
 
-
-
 function AboutMePage({ id, content }) {
-  const { history, whatIDo, attitudes } = content;
+  const { history, whatIDo, attitudes, interests } = content;
 
   return (
     <SectionContainer id={id}>
@@ -15,7 +12,6 @@ function AboutMePage({ id, content }) {
       <div>
         <p>{history.p_1}</p>
         <p>{history.p_2}</p>
-        <p>{history.p_3}</p>
       </div>
       <article>
         <header>
@@ -31,16 +27,18 @@ function AboutMePage({ id, content }) {
         <header>
           <SubTitle>{attitudes.h3_1}</SubTitle>
         </header>
-        <p>{attitudes.p_1}</p>
-        <p>{attitudes.p_2}</p>
+        <ol>
+          {attitudes.ol_1.map((li, i) => (
+            <li key={i}>{li}</li>
+          ))}
+        </ol>
       </article>
-      {/* <article>
+      <article>
         <header>
           <SubTitle>{interests.h3_1}</SubTitle>
         </header>
         <p>{interests.p_1}</p>
-        <p>{interests.p_2}</p>
-      </article> */}
+      </article>
     </SectionContainer>
   );
 }
