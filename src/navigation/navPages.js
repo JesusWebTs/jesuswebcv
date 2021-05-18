@@ -19,9 +19,7 @@ const pageContent = [
   },
   {
     href: "contact",
-    section: (
-      <ContactPage id="contact" content={contactMook()}></ContactPage>
-    ),
+    section: <ContactPage id="contact" content={contactMook()} />,
     title: "Contacto",
   },
   /* {
