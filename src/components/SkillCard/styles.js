@@ -21,18 +21,24 @@ export const SkillContainerStyled = styled.div`
 `;
 
 export const SkillDescriptionStyled = styled.p`
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+`;
+
+export const SkillDescriptionContainerStyled = styled.div`
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000099;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  display: block;
-  background-color: #00000099;
   margin: auto;
   backdrop-filter: blur(8px);
-  color: white;
-  text-align: center;
-  padding: 20px 10px;
   opacity: 0;
   transition: opacity 0.5s ease;
   &:hover {

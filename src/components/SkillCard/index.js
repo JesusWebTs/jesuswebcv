@@ -4,6 +4,7 @@ import {
   SkillIconStyled,
   SkillTextStyled,
   SkillDescriptionStyled,
+  SkillDescriptionContainerStyled
 } from "./styles";
 
 function SkillCard({ skillName, skillIconName, color, text }) {
@@ -13,7 +14,9 @@ function SkillCard({ skillName, skillIconName, color, text }) {
       <SkillIconStyled>
         <img width="100%" src={skillIconName} alt={text}></img>
       </SkillIconStyled>
-      <SkillDescriptionStyled>{text}</SkillDescriptionStyled>
+      <SkillDescriptionContainerStyled>
+        <SkillDescriptionStyled>{text}</SkillDescriptionStyled>
+      </SkillDescriptionContainerStyled>
     </SkillContainerStyled>
   );
 }
