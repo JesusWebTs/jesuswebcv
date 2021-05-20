@@ -155,7 +155,7 @@ function ContactForm({ direction = "column" }) {
               filled={formState.company ? true : false}
               htmlFor="company"
             >
-              Compañia:
+              Compañía:
             </InputLabelStyled>
           </InputContainerStyled>
           {errorCompany && submit ? (

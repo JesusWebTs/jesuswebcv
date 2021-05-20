@@ -28,12 +28,12 @@ function ContactForm() {
         <CardIcon>
           <PhoneIcon />
         </CardIcon>
-        <CardText>Telefono</CardText>
+        <CardText>Teléfono</CardText>
         <a href="tel:+584140261666">(+58)4140261666</a>
       </ContactCard>
       <ContactCard>
         <CardIcon>#</CardIcon>
-        <CardText>Social Media</CardText>
+        <CardText>Redes Sociales</CardText>
         <SocialMedia />
       </ContactCard>
     </CardsContainer>

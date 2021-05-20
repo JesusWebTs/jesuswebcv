@@ -31,7 +31,7 @@ function HeaderComponent({ id }) {
             <SocialMedia />
           </SocialContainer>
           <div style={{ display: "flex", gap: "15px" }}>
-            <Button onClick={openModal}>¡Contactame!</Button>
+            <Button onClick={openModal}>¡Contáctame!</Button>
             <AButton href={cv} download>
               Descarga Mi CV
             </AButton>
